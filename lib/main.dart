@@ -45,15 +45,15 @@ class _MyHomeState extends State<MyHome> {
 
   bool _connected = false;
 
-  ui.Image _image;
+  ui.Image? _image;
 
-  double _temp;
+  double? _temp;
 
   bool _show = false;
   int _seconds = 0;
   int _secondsLimit = 2;
 
-  ui.Image _frame;
+  ui.Image? _frame;
 
   @override
   void initState() {
@@ -178,7 +178,7 @@ class _MyHomeState extends State<MyHome> {
   List<Widget> stream() => [
         getTransformedWidget(
           CustomPaint(
-            painter: StreamPainter(_frame),
+            painter: StreamPainter(_frame!),
           ),
         ),
         Align(
